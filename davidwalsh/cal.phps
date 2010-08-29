@@ -126,7 +126,7 @@ $month = (int)($_GET['month'] ? $_GET['month'] : date("n"));
 
 $year = (int)($_GET['year'] ? $_GET['year'] : date("Y"));
 
-echo '<center><h2><a class="control" href="cal.php?month='. ( $month != 1 ? $month - 1 : 12) .'&year='. ( $month != 1 ? $year : $year - 1 ) .'">&laquo; Prev month</a> '.date('F',mktime(0,0,0,$month,1,$year)).' ' . $year . ' <a class="control" href="cal.php?month='. ( $month != 12 ? $month + 1 : 1) .'&year='. ( $month != 12 ? $year : $year + 1 ) .'">Next month &raquo;</a> <a class="control" href="cal.php?month='. date("n").'&year='. date("Y") .'">Today</a></h2></center>';
+echo '<center><h2><a class="control" href="cal.php?month='. ( $month != 1 ? $month - 1 : 12) .'&year='. ( $month != 1 ? $year : $year - 1 ) .'">&laquo; Prev month</a> &nbsp;&nbsp;'.date('F',mktime(0,0,0,$month,1,$year)).' ' . $year . ' &nbsp;&nbsp;<a class="control" href="cal.php?month='. ( $month != 12 ? $month + 1 : 1) .'&year='. ( $month != 12 ? $year : $year + 1 ) .'">Next month &raquo;</a> <a class="control" href="cal.php?month='. date("n").'&year='. date("Y") .'">Today</a></h2></center>';
 
 echo draw_calendar($month,$year);
 
